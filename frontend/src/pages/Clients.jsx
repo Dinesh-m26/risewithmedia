@@ -1,9 +1,9 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import TestimonialSlider from "../components/TestimonialSlider";
-import Richilogo from "../assets/clientlogo/Richilogo.png";
-import KrinBrinlogo from "../assets/clientlogo/KrinBrinlogo.png";
-import Savlologo from "../assets/clientlogo/Savlologo.png";
+import Richilogo from "../assets/clientlogo/richilogo.png";
+import KrinBrinlogo from "../assets/clientlogo/krinBrinlogo.png";
+import Savlologo from "../assets/clientlogo/savlologo.png";
 import kertamlogo from "../assets/clientlogo/kertamlogo.png";
 import neoweblogo from "../assets/clientlogo/neoweblogo.png";
 import zoylogo from "../assets/clientlogo/zoylogo.png";
