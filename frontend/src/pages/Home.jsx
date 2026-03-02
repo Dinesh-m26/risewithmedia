@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform, AnimatePresence, useInView } from "fra
 import ServiceCard from "../components/ServiceCard";
 import Richilogo from "../assets/clientlogo/richi-logo.png";
 import KrinBrinlogo from "../assets/clientlogo/krinbrinlogo.png";
-import Savlologo from "../assets/clientlogo/Savlologo.png";
+import Savlologo from "../assets/clientlogo/savlologo.png";
 import kertamlogo from "../assets/clientlogo/kertamlogo.png";
 import neoweblogo from "../assets/clientlogo/neoweblogo.png";
 import zoylogo from "../assets/clientlogo/zoylogo.png";
