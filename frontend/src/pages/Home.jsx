@@ -1,8 +1,8 @@
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform, AnimatePresence, useInView } from "framer-motion";
 import ServiceCard from "../components/ServiceCard";
-import Richilogo from "../assets/clientlogo/Richilogo.png";
-import KrinBrinlogo from "../assets/clientlogo/KrinBrinlogo.png";
+import Richilogo from "../assets/clientlogo/richi-logo.png";
+import KrinBrinlogo from "../assets/clientlogo/krinbrinlogo.png";
 import Savlologo from "../assets/clientlogo/Savlologo.png";
 import kertamlogo from "../assets/clientlogo/kertamlogo.png";
 import neoweblogo from "../assets/clientlogo/neoweblogo.png";
