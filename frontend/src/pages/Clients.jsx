@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import TestimonialSlider from "../components/TestimonialSlider";
-import Richilogo from "../assets/clientlogo/richilogo.png";
+import Richilogo from "../assets/clientlogo/richi-logo.png";
 import KrinBrinlogo from "../assets/clientlogo/krinBrinlogo.png";
 import Savlologo from "../assets/clientlogo/savlologo.png";
 import kertamlogo from "../assets/clientlogo/kertamlogo.png";
