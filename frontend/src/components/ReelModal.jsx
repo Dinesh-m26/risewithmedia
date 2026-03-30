@@ -57,7 +57,7 @@ export default function ReelModal({ isOpen, onClose }) {
         >
           {/* Backdrop */}
           <motion.div
-            className="absolute inset-0 bg-[#1e1e1e]/70 backdrop-blur-sm"
+            className="absolute inset-0 bg-[#243746]/70 backdrop-blur-sm"
             onClick={handleClose}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -75,7 +75,7 @@ export default function ReelModal({ isOpen, onClose }) {
             {/* Close */}
             <button
               onClick={handleClose}
-              className="absolute top-5 right-5 w-9 h-9 rounded-full bg-[#dadcf4]/50 hover:bg-[#beb9df]/70 flex items-center justify-center transition-colors"
+              className="absolute top-5 right-5 w-9 h-9 rounded-full bg-[#ece3d4]/50 hover:bg-[#c9a46a]/70 flex items-center justify-center transition-colors"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M18 6L6 18M6 6l12 12"/>
@@ -89,20 +89,20 @@ export default function ReelModal({ isOpen, onClose }) {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ type: "spring" }}
               >
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#749985] to-[#dadcf4] flex items-center justify-center shadow-lg">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#243746] to-[#ece3d4] flex items-center justify-center shadow-lg">
                   <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
                     <polyline points="20 6 9 17 4 12"/>
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-black text-2xl text-[#1e1e1e] mb-2">You're All Set!</h3>
-                  <p className="text-[#1e1e1e]/60 text-sm leading-relaxed">
+                  <h3 className="font-black text-2xl text-[#243746] mb-2">You're All Set!</h3>
+                  <p className="text-[#243746]/60 text-sm leading-relaxed">
                     Thank you. Our team will contact you shortly with access to our reels.
                   </p>
                 </div>
                 <button
                   onClick={handleClose}
-                  className="bg-[#588ef4] text-white px-8 py-3 rounded-xl font-semibold hover:bg-[#3d6fd4] transition-colors"
+                  className="bg-[#2f6b6a] text-white px-8 py-3 rounded-xl font-semibold hover:bg-[#255756] transition-colors"
                 >
                   Close
                 </button>
@@ -110,30 +110,30 @@ export default function ReelModal({ isOpen, onClose }) {
             ) : (
               <>
                 <div className="mb-7">
-                  <div className="inline-flex items-center gap-2 bg-[#588ef4]/10 text-[#588ef4] text-xs font-bold px-3 py-1.5 rounded-full mb-4">
+                  <div className="inline-flex items-center gap-2 bg-[#2f6b6a]/10 text-[#2f6b6a] text-xs font-bold px-3 py-1.5 rounded-full mb-4">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
                       <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
                     </svg>
                     Unlock Our Reels
                   </div>
-                  <h3 className="font-black text-2xl text-[#1e1e1e] mb-2">View More Reels</h3>
-                  <p className="text-[#1e1e1e]/55 text-sm">Fill in your details and we'll share our complete reel portfolio with you.</p>
+                  <h3 className="font-black text-2xl text-[#243746] mb-2">View More Reels</h3>
+                  <p className="text-[#243746]/55 text-sm">Fill in your details and we'll share our complete reel portfolio with you.</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                   <div>
-                    <label className="text-xs font-bold text-[#1e1e1e]/50 uppercase tracking-wider mb-1.5 block">Full Name *</label>
+                    <label className="text-xs font-bold text-[#243746]/50 uppercase tracking-wider mb-1.5 block">Full Name *</label>
                     <input
                       name="name"
                       value={form.name}
                       onChange={handleChange}
                       placeholder="John Doe"
                       required
-                      className="w-full px-4 py-3 rounded-xl bg-[#fdfcfd] border border-[#dadcf4] focus:border-[#588ef4] focus:ring-2 focus:ring-[#588ef4]/20 outline-none text-sm text-[#1e1e1e] transition-all placeholder:text-[#1e1e1e]/30"
+                      className="w-full px-4 py-3 rounded-xl bg-[#fbf7f2] border border-[#ece3d4] focus:border-[#2f6b6a] focus:ring-2 focus:ring-[#2f6b6a]/20 outline-none text-sm text-[#243746] transition-all placeholder:text-[#243746]/30"
                     />
                   </div>
                   <div>
-                    <label className="text-xs font-bold text-[#1e1e1e]/50 uppercase tracking-wider mb-1.5 block">Email Address *</label>
+                    <label className="text-xs font-bold text-[#243746]/50 uppercase tracking-wider mb-1.5 block">Email Address *</label>
                     <input
                       name="email"
                       type="email"
@@ -141,11 +141,11 @@ export default function ReelModal({ isOpen, onClose }) {
                       onChange={handleChange}
                       placeholder="john@company.com"
                       required
-                      className="w-full px-4 py-3 rounded-xl bg-[#fdfcfd] border border-[#dadcf4] focus:border-[#588ef4] focus:ring-2 focus:ring-[#588ef4]/20 outline-none text-sm text-[#1e1e1e] transition-all placeholder:text-[#1e1e1e]/30"
+                      className="w-full px-4 py-3 rounded-xl bg-[#fbf7f2] border border-[#ece3d4] focus:border-[#2f6b6a] focus:ring-2 focus:ring-[#2f6b6a]/20 outline-none text-sm text-[#243746] transition-all placeholder:text-[#243746]/30"
                     />
                   </div>
                   <div>
-                    <label className="text-xs font-bold text-[#1e1e1e]/50 uppercase tracking-wider mb-1.5 block">Phone Number *</label>
+                    <label className="text-xs font-bold text-[#243746]/50 uppercase tracking-wider mb-1.5 block">Phone Number *</label>
                     <input
                       name="phone"
                       type="tel"
@@ -153,7 +153,7 @@ export default function ReelModal({ isOpen, onClose }) {
                       onChange={handleChange}
                       placeholder="+91 98765 43210"
                       required
-                      className="w-full px-4 py-3 rounded-xl bg-[#fdfcfd] border border-[#dadcf4] focus:border-[#588ef4] focus:ring-2 focus:ring-[#588ef4]/20 outline-none text-sm text-[#1e1e1e] transition-all placeholder:text-[#1e1e1e]/30"
+                      className="w-full px-4 py-3 rounded-xl bg-[#fbf7f2] border border-[#ece3d4] focus:border-[#2f6b6a] focus:ring-2 focus:ring-[#2f6b6a]/20 outline-none text-sm text-[#243746] transition-all placeholder:text-[#243746]/30"
                     />
                   </div>
 
@@ -164,7 +164,7 @@ export default function ReelModal({ isOpen, onClose }) {
                   <motion.button
                     type="submit"
                     disabled={status === "loading"}
-                    className="w-full bg-[#588ef4] text-white py-3.5 rounded-xl font-bold text-sm mt-2 hover:bg-[#3d6fd4] transition-colors disabled:opacity-60 flex items-center justify-center gap-2"
+                    className="w-full bg-[#2f6b6a] text-white py-3.5 rounded-xl font-bold text-sm mt-2 hover:bg-[#255756] transition-colors disabled:opacity-60 flex items-center justify-center gap-2"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >

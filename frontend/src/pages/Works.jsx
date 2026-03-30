@@ -39,7 +39,7 @@ const websites = [
     type: "Manufacturer & Retail",
     url: "https://www.hsiehhsuindia.com/",
     thumbnail: screenshot1,
-    color: "from-[#dadcf4] to-[#beb9df]",
+    color: "from-[#ece3d4] to-[#c9a46a]",
     emoji: "🛍️",
     tags: ["Next.js", "Shopify", "SEO"],
     metric: "+240% Revenue",
@@ -50,7 +50,7 @@ const websites = [
     type: "E-commerce",
     url: "https://www.mogi.co.in",
     thumbnail: screenshot2,
-    color: "from-[#749985]/40 to-[#dadcf4]",
+    color: "from-[#243746]/40 to-[#ece3d4]",
     emoji: "🏥",
     tags: ["React", "Funnel", "CRM"],
     metric: "3× More Leads",
@@ -61,7 +61,7 @@ const websites = [
     type: "Bevarage",
     url: "https://richifoodproducts.com",
     thumbnail: null,
-    color: "from-[#588ef4]/30 to-[#dadcf4]",
+    color: "from-[#2f6b6a]/30 to-[#ece3d4]",
     emoji: "🏗️",
     tags: ["Landing Page", "Leads", "WhatsApp"],
     metric: "₹18 CPL",
@@ -75,7 +75,7 @@ const adCreatives = [
     brand: "RetailBrand",
     platform: "Meta Ads",
     emoji: "🎉",
-    color: "from-red-400 to-orange-400",
+    color: "from-[#2f6b6a] to-[#c9a46a]",
     metric: "3.2× ROAS",
     image: campaign1,
   },
@@ -85,7 +85,7 @@ const adCreatives = [
     brand: "EduTechBrand",
     platform: "Meta Ads",
     emoji: "📚",
-    color: "from-[#588ef4] to-[#749985]",
+    color: "from-[#2f6b6a] to-[#243746]",
     metric: "₹42 CPL",
     image: campaign2,
   },
@@ -95,7 +95,7 @@ const adCreatives = [
     brand: "E-commerce",
     platform: "Meta Ads",
     emoji: "🚀",
-    color: "from-purple-400 to-[#beb9df]",
+    color: "from-[#243746] to-[#2f6b6a]",
     metric: "5× ROI",
     image: campaign3,
   },
@@ -137,11 +137,11 @@ function SectionHeader({ badge, title, subtitle }) {
     <motion.div ref={ref} initial="hidden" animate={inView ? "show" : "hidden"} variants={stagger}
       className="text-center mb-10 md:mb-14">
       <motion.div variants={fadeUp}
-        className="inline-flex items-center gap-2 bg-[#dadcf4]/60 text-[#588ef4] text-xs font-bold px-4 py-2 rounded-full mb-4">
+        className="inline-flex items-center gap-2 bg-[#ece3d4]/60 text-[#2f6b6a] text-xs font-bold px-4 py-2 rounded-full mb-4">
         {badge}
       </motion.div>
-      <motion.h2 variants={fadeUp} custom={1} className="text-2xl md:text-3xl lg:text-4xl font-black text-[#1e1e1e] mb-3">{title}</motion.h2>
-      {subtitle && <motion.p variants={fadeUp} custom={2} className="text-[#1e1e1e]/50 max-w-lg mx-auto text-sm px-4">{subtitle}</motion.p>}
+      <motion.h2 variants={fadeUp} custom={1} className="text-2xl md:text-3xl lg:text-4xl font-black text-[#243746] mb-3">{title}</motion.h2>
+      {subtitle && <motion.p variants={fadeUp} custom={2} className="text-[#243746]/50 max-w-lg mx-auto text-sm px-4">{subtitle}</motion.p>}
     </motion.div>
   );
 }
@@ -164,15 +164,15 @@ function LaptopCard({ site, i }) {
     >
       <div className={`absolute -inset-4 bg-gradient-to-br ${site.color} opacity-0 group-hover:opacity-40 blur-2xl rounded-3xl transition-all duration-700`} />
 
-      <div className="relative bg-white border border-[#dadcf4]/70 rounded-2xl overflow-hidden shadow-lg group-hover:shadow-2xl group-hover:shadow-[#588ef4]/10 transition-all duration-500">
-        <div className="bg-[#1a1a2e] px-3 sm:px-5 pt-3 sm:pt-5 pb-0">
-          <div className="bg-[#0f0f1a] rounded-t-xl overflow-hidden border border-white/5">
-            <div className="flex items-center gap-1.5 px-2 sm:px-3 py-2 bg-[#1e1e30] border-b border-white/5">
+      <div className="relative bg-white border border-[#ece3d4]/70 rounded-2xl overflow-hidden shadow-lg group-hover:shadow-2xl group-hover:shadow-[#2f6b6a]/10 transition-all duration-500">
+        <div className="bg-[#304756] px-3 sm:px-5 pt-3 sm:pt-5 pb-0">
+          <div className="bg-[#1d2d38] rounded-t-xl overflow-hidden border border-white/5">
+            <div className="flex items-center gap-1.5 px-2 sm:px-3 py-2 bg-[#425868] border-b border-white/5">
               <div className="w-2 h-2 rounded-full bg-red-500/80" />
               <div className="w-2 h-2 rounded-full bg-yellow-500/80" />
               <div className="w-2 h-2 rounded-full bg-green-500/80" />
               <div className="flex-1 mx-2 sm:mx-3 flex items-center gap-2 bg-white/5 rounded-full px-2 sm:px-3 py-0.5">
-                <svg className="w-2.5 h-2.5 text-green-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <svg className="w-2.5 h-2.5 text-[#2f6b6a] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <rect x="5" y="11" width="14" height="11" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/>
                 </svg>
                 <span className="text-white/30 text-[8px] sm:text-[9px] font-mono truncate">
@@ -228,14 +228,14 @@ function LaptopCard({ site, i }) {
               <AnimatePresence>
                 {hovering && (
                   <motion.div
-                    className="absolute inset-0 bg-[#588ef4]/80 backdrop-blur-sm flex items-center justify-center"
+                    className="absolute inset-0 bg-[#2f6b6a]/80 backdrop-blur-sm flex items-center justify-center"
                     initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
                     transition={{ duration: 0.2 }}>
                     <motion.a
                       href={site.url || "#"}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-white text-[#588ef4] font-black text-xs px-5 py-2.5 rounded-xl shadow-xl flex items-center gap-2"
+                      className="bg-white text-[#2f6b6a] font-black text-xs px-5 py-2.5 rounded-xl shadow-xl flex items-center gap-2"
                       initial={{ scale: 0.85, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
                       exit={{ scale: 0.85, opacity: 0 }}
@@ -257,17 +257,17 @@ function LaptopCard({ site, i }) {
           <div className="w-14 sm:w-16 h-1 bg-[#c0c2d0] rounded-full" />
         </div>
 
-        <div className="px-4 sm:px-5 py-4 border-t border-[#dadcf4]/50">
+        <div className="px-4 sm:px-5 py-4 border-t border-[#ece3d4]/50">
           <div className="flex items-start justify-between gap-2">
             <div className="min-w-0">
-              <span className="text-[10px] font-bold text-[#749985] uppercase tracking-wider">{site.type}</span>
-              <h3 className="font-black text-sm sm:text-base text-[#1e1e1e] mt-0.5 leading-tight">{site.title}</h3>
+              <span className="text-[10px] font-bold text-[#243746] uppercase tracking-wider">{site.type}</span>
+              <h3 className="font-black text-sm sm:text-base text-[#243746] mt-0.5 leading-tight">{site.title}</h3>
             </div>
-            <span className="bg-[#588ef4]/10 text-[#588ef4] text-xs font-black px-2 sm:px-2.5 py-1 rounded-lg shrink-0 whitespace-nowrap">{site.metric}</span>
+            <span className="bg-[#2f6b6a]/10 text-[#2f6b6a] text-xs font-black px-2 sm:px-2.5 py-1 rounded-lg shrink-0 whitespace-nowrap">{site.metric}</span>
           </div>
           <div className="flex flex-wrap gap-1.5 mt-3">
             {site.tags.map((tag) => (
-              <span key={tag} className="text-[10px] font-semibold bg-[#dadcf4]/60 text-[#588ef4] px-2 sm:px-2.5 py-1 rounded-full">{tag}</span>
+              <span key={tag} className="text-[10px] font-semibold bg-[#ece3d4]/60 text-[#2f6b6a] px-2 sm:px-2.5 py-1 rounded-full">{tag}</span>
             ))}
           </div>
         </div>
@@ -300,7 +300,7 @@ function ReelCard({ reel, i, onUnlockClick }) {
       transition={{ duration: 0.5, delay: i * 0.08 }}
       whileHover={{ scale: 1.025, zIndex: 10 }}
     >
-      <div className="absolute -inset-1 rounded-2xl bg-[#588ef4]/0 group-hover:bg-[#588ef4]/25 blur-lg transition-all duration-500 -z-10" />
+      <div className="absolute -inset-1 rounded-2xl bg-[#2f6b6a]/0 group-hover:bg-[#2f6b6a]/25 blur-lg transition-all duration-500 -z-10" />
 
       <video
         ref={videoRef}
@@ -353,27 +353,27 @@ function ReelsCTA({ onUnlockClick }) {
       <div className="absolute inset-x-0 -top-20 h-40 bg-gradient-to-t from-white via-white/90 to-transparent z-20 pointer-events-none" />
 
       <div className="relative z-30 mx-auto max-w-xl px-4">
-        <div className="relative bg-[#1e1e1e] rounded-3xl p-6 sm:p-8 overflow-hidden text-center shadow-2xl">
+        <div className="relative bg-[#243746] rounded-3xl p-6 sm:p-8 overflow-hidden text-center shadow-2xl">
           <motion.div
-            className="absolute -top-10 -left-10 w-48 h-48 bg-[#588ef4]/30 rounded-full blur-3xl"
+            className="absolute -top-10 -left-10 w-48 h-48 bg-[#2f6b6a]/30 rounded-full blur-3xl"
             animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
             transition={{ duration: 4, repeat: Infinity }} />
           <motion.div
-            className="absolute -bottom-10 -right-10 w-48 h-48 bg-[#749985]/20 rounded-full blur-3xl"
+            className="absolute -bottom-10 -right-10 w-48 h-48 bg-[#243746]/20 rounded-full blur-3xl"
             animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.4, 0.2] }}
             transition={{ duration: 4, repeat: Infinity }} />
 
           <div className="relative z-10">
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-4 py-1.5 mb-5">
               <motion.span
-                className="w-2 h-2 rounded-full bg-green-400 shrink-0"
+                className="w-2 h-2 rounded-full bg-[#2f6b6a] shrink-0"
                 animate={{ opacity: [1, 0.3, 1] }}
                 transition={{ duration: 1.5, repeat: Infinity }} />
               <span className="text-white/70 text-xs font-medium">
                 <motion.span
                   key={count}
                   className="text-white font-black"
-                  initial={{ scale: 1.3, color: "#588ef4" }}
+                  initial={{ scale: 1.3, color: "#2f6b6a" }}
                   animate={{ scale: 1, color: "#ffffff" }}
                   transition={{ duration: 0.4 }}>
                   {count}
@@ -383,7 +383,7 @@ function ReelsCTA({ onUnlockClick }) {
             </div>
 
             <h3 className="text-xl sm:text-2xl font-black text-white mb-2">
-              See <span className="text-[#588ef4]">All {reelVideos.length * 50}+ Reels</span> We've Made
+              See <span className="text-[#2f6b6a]">All {reelVideos.length * 50}+ Reels</span> We've Made
             </h3>
             <p className="text-white/40 text-sm mb-6">
               Our complete reel library is one form away. Takes 30 seconds.
@@ -391,7 +391,7 @@ function ReelsCTA({ onUnlockClick }) {
 
             <motion.button
               onClick={onUnlockClick}
-              className="relative group/btn w-full bg-[#588ef4] text-white py-4 rounded-2xl font-black text-sm overflow-hidden"
+              className="relative group/btn w-full bg-[#2f6b6a] text-white py-4 rounded-2xl font-black text-sm overflow-hidden"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}>
               <motion.div
@@ -427,11 +427,11 @@ function FloatingReelsCTA({ onUnlockClick, visible }) {
           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}>
           <motion.button
             onClick={onUnlockClick}
-            className="relative flex items-center justify-center gap-3 bg-[#1e1e1e] text-white w-full sm:w-auto px-6 py-3.5 rounded-full font-bold text-sm shadow-2xl border border-white/10 overflow-hidden"
+            className="relative flex items-center justify-center gap-3 bg-[#243746] text-white w-full sm:w-auto px-6 py-3.5 rounded-full font-bold text-sm shadow-2xl border border-white/10 overflow-hidden"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}>
             <motion.div
-              className="absolute inset-0 rounded-full border-2 border-[#588ef4]"
+              className="absolute inset-0 rounded-full border-2 border-[#2f6b6a]"
               animate={{ opacity: [0.5, 1, 0.5], scale: [1, 1.03, 1] }}
               transition={{ duration: 2, repeat: Infinity }} />
             <motion.div
@@ -439,11 +439,11 @@ function FloatingReelsCTA({ onUnlockClick, visible }) {
               animate={{ x: ["-100%", "200%"] }}
               transition={{ duration: 3, repeat: Infinity, repeatDelay: 2 }} />
             <motion.span
-              className="w-2 h-2 rounded-full bg-green-400 shrink-0"
+              className="w-2 h-2 rounded-full bg-[#2f6b6a] shrink-0"
               animate={{ opacity: [1, 0.3, 1] }}
               transition={{ duration: 1.5, repeat: Infinity }} />
             <span className="relative">🎬 Unlock Full Library</span>
-            <span className="relative bg-[#588ef4] text-white text-[10px] font-black px-2 py-0.5 rounded-full">FREE</span>
+            <span className="relative bg-[#2f6b6a] text-white text-[10px] font-black px-2 py-0.5 rounded-full">FREE</span>
           </motion.button>
         </motion.div>
       )}
@@ -503,21 +503,21 @@ function LeadModal({ isOpen, onClose }) {
           exit={{ scale: 0.9, opacity: 0, y: 30 }}
           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}>
 
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#588ef4] via-[#749985] to-[#588ef4]" />
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#2f6b6a] via-[#243746] to-[#2f6b6a]" />
           <div className="flex justify-center mb-4 sm:hidden">
-            <div className="w-10 h-1 bg-[#dadcf4] rounded-full" />
+            <div className="w-10 h-1 bg-[#ece3d4] rounded-full" />
           </div>
 
           <button onClick={onClose}
-            className="absolute top-4 right-4 w-8 h-8 rounded-full bg-[#f8f9ff] border border-[#dadcf4] flex items-center justify-center text-[#9ca3af] hover:text-[#1e1e1e] transition-colors text-xs">
+            className="absolute top-4 right-4 w-8 h-8 rounded-full bg-[#f7f1e8] border border-[#ece3d4] flex items-center justify-center text-[#9ca3af] hover:text-[#243746] transition-colors text-xs">
             ✕
           </button>
 
           {!submitted ? (
             <>
               <div className="text-center mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-[#588ef4]/10 flex items-center justify-center text-2xl mx-auto mb-4">🎬</div>
-                <h2 className="text-xl sm:text-2xl font-black text-[#1e1e1e] mb-2">Unlock Full Portfolio</h2>
+                <div className="w-14 h-14 rounded-2xl bg-[#2f6b6a]/10 flex items-center justify-center text-2xl mx-auto mb-4">🎬</div>
+                <h2 className="text-xl sm:text-2xl font-black text-[#243746] mb-2">Unlock Full Portfolio</h2>
                 <p className="text-[#6b7280] text-sm">Fill your details — we'll share our complete reel library and reach out to discuss your project.</p>
               </div>
 
@@ -534,7 +534,7 @@ function LeadModal({ isOpen, onClose }) {
                       required={f.required} type={f.type} placeholder={f.placeholder}
                       value={form[f.key]}
                       onChange={(e) => setForm({ ...form, [f.key]: e.target.value })}
-                      className="w-full border border-[#dadcf4] rounded-xl px-4 py-3 text-sm text-[#1e1e1e] placeholder-[#9ca3af] focus:outline-none focus:border-[#588ef4] focus:ring-2 focus:ring-[#588ef4]/20 transition-all"
+                      className="w-full border border-[#ece3d4] rounded-xl px-4 py-3 text-sm text-[#243746] placeholder-[#9ca3af] focus:outline-none focus:border-[#2f6b6a] focus:ring-2 focus:ring-[#2f6b6a]/20 transition-all"
                     />
                   </div>
                 ))}
@@ -544,7 +544,7 @@ function LeadModal({ isOpen, onClose }) {
                 )}
 
                 <motion.button type="submit" disabled={loading}
-                  className="relative w-full bg-[#588ef4] text-white py-4 rounded-xl font-black text-sm shadow-xl shadow-[#588ef4]/30 hover:bg-[#3d6fd4] transition-all duration-300 disabled:opacity-70 mt-2 overflow-hidden"
+                  className="relative w-full bg-[#2f6b6a] text-white py-4 rounded-xl font-black text-sm shadow-xl shadow-[#2f6b6a]/30 hover:bg-[#255756] transition-all duration-300 disabled:opacity-70 mt-2 overflow-hidden"
                   whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12"
@@ -560,16 +560,16 @@ function LeadModal({ isOpen, onClose }) {
             <motion.div className="text-center py-8"
               initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4 }}>
-              <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center text-3xl mx-auto mb-5">✅</div>
-              <h2 className="text-2xl font-black text-[#1e1e1e] mb-3">You're In!</h2>
+              <div className="w-16 h-16 rounded-full bg-[#ece3d4] flex items-center justify-center text-3xl mx-auto mb-5">✅</div>
+              <h2 className="text-2xl font-black text-[#243746] mb-3">You're In!</h2>
               <p className="text-[#6b7280] text-sm mb-2">
-                Thanks <span className="font-bold text-[#1e1e1e]">{form.name}</span>! We've received your request.
+                Thanks <span className="font-bold text-[#243746]">{form.name}</span>! We've received your request.
               </p>
               <p className="text-[#6b7280] text-sm mb-6">
-                Our team will reach out to <span className="font-bold text-[#588ef4]">{form.phone}</span> within 24 hours.
+                Our team will reach out to <span className="font-bold text-[#2f6b6a]">{form.phone}</span> within 24 hours.
               </p>
               <motion.button onClick={onClose}
-                className="bg-[#588ef4] text-white px-8 py-3 rounded-xl font-bold text-sm"
+                className="bg-[#2f6b6a] text-white px-8 py-3 rounded-xl font-bold text-sm"
                 whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                 Close
               </motion.button>
@@ -590,10 +590,10 @@ function StatsStrip() {
       className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-16 sm:mb-20">
       {stats.map((s, i) => (
         <motion.div key={i} variants={fadeUp} custom={i}
-          className="bg-white border border-[#dadcf4] rounded-2xl p-4 sm:p-5 text-center shadow-sm hover:shadow-md hover:border-[#588ef4]/30 transition-all duration-300"
+          className="bg-white border border-[#ece3d4] rounded-2xl p-4 sm:p-5 text-center shadow-sm hover:shadow-md hover:border-[#2f6b6a]/30 transition-all duration-300"
           whileHover={{ y: -3 }}>
-          <div className="text-2xl sm:text-3xl font-black text-[#588ef4] mb-1">{s.num}</div>
-          <div className="text-[#1e1e1e]/50 text-[11px] sm:text-xs font-medium">{s.label}</div>
+          <div className="text-2xl sm:text-3xl font-black text-[#2f6b6a] mb-1">{s.num}</div>
+          <div className="text-[#243746]/50 text-[11px] sm:text-xs font-medium">{s.label}</div>
         </motion.div>
       ))}
     </motion.div>
@@ -630,13 +630,13 @@ export default function Works() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-[#dadcf4]/60 text-[#588ef4] text-xs font-bold px-4 py-2 rounded-full mb-5">
+            className="inline-flex items-center gap-2 bg-[#ece3d4]/60 text-[#2f6b6a] text-xs font-bold px-4 py-2 rounded-full mb-5">
             ✦ Portfolio
           </motion.div>
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-[#1e1e1e] mb-4 sm:mb-5 px-2">
-            Our Creative <span className="text-[#588ef4]">Work</span>
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-[#243746] mb-4 sm:mb-5 px-2">
+            Our Creative <span className="text-[#2f6b6a]">Work</span>
           </h1>
-          <p className="text-[#1e1e1e]/50 text-base sm:text-lg max-w-xl mx-auto mb-8 sm:mb-10 px-4">
+          <p className="text-[#243746]/50 text-base sm:text-lg max-w-xl mx-auto mb-8 sm:mb-10 px-4">
             Real results for real brands. Browse our portfolio of reels, websites, and ad campaigns.
           </p>
 
@@ -646,8 +646,8 @@ export default function Works() {
                 onClick={() => setActiveFilter(cat)}
                 className={`px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 ${
                   activeFilter === cat
-                    ? "bg-[#588ef4] text-white shadow-lg shadow-[#588ef4]/25"
-                    : "bg-[#f8f9ff] border border-[#dadcf4] text-[#1e1e1e]/60 hover:border-[#588ef4]/40"
+                    ? "bg-[#2f6b6a] text-white shadow-lg shadow-[#2f6b6a]/25"
+                    : "bg-[#f7f1e8] border border-[#ece3d4] text-[#243746]/60 hover:border-[#2f6b6a]/40"
                 }`}
                 whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                 {cat}
@@ -670,10 +670,10 @@ export default function Works() {
               />
 
               {reelVideos.length === 0 ? (
-                <div className="text-center py-16 text-[#9ca3af] border-2 border-dashed border-[#dadcf4] rounded-3xl mb-10 mx-4">
+                <div className="text-center py-16 text-[#9ca3af] border-2 border-dashed border-[#ece3d4] rounded-3xl mb-10 mx-4">
                   <div className="text-4xl mb-3">🎬</div>
                   <p className="font-bold text-[#6b7280] mb-1">Add your videos to get started</p>
-                  <p className="text-sm px-4">Import your .mp4 files and add them to the <code className="bg-[#f8f9ff] px-1 rounded">reelVideos</code> array</p>
+                  <p className="text-sm px-4">Import your .mp4 files and add them to the <code className="bg-[#f7f1e8] px-1 rounded">reelVideos</code> array</p>
                 </div>
               ) : (
                 <>
@@ -722,7 +722,7 @@ export default function Works() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-16 sm:mb-24">
                 {adCreatives.map((ad, i) => (
                   <motion.div key={ad.id}
-                    className="rounded-2xl overflow-hidden border border-[#dadcf4]/60 bg-white shadow-lg shadow-[#beb9df]/10 hover:shadow-xl hover:shadow-[#588ef4]/15 transition-all duration-500 group"
+                    className="rounded-2xl overflow-hidden border border-[#ece3d4]/60 bg-white shadow-lg shadow-[#c9a46a]/10 hover:shadow-xl hover:shadow-[#2f6b6a]/15 transition-all duration-500 group"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -742,16 +742,16 @@ export default function Works() {
                           </motion.span>
                         </div>
                       )}
-                      <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-white/95 backdrop-blur-sm text-[#1e1e1e] font-black text-xs sm:text-sm px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl shadow-md">
+                      <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-white/95 backdrop-blur-sm text-[#243746] font-black text-xs sm:text-sm px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl shadow-md">
                         {ad.metric}
                       </div>
-                      <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 bg-[#1e1e1e]/55 backdrop-blur-sm text-white text-xs font-semibold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full">
+                      <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 bg-[#243746]/55 backdrop-blur-sm text-white text-xs font-semibold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full">
                         {ad.platform}
                       </div>
                     </div>
                     <div className="p-4 sm:p-6">
-                      <span className="text-xs font-bold text-[#749985] uppercase tracking-wider">{ad.brand}</span>
-                      <h3 className="font-black text-base sm:text-lg text-[#1e1e1e] mt-1">{ad.title}</h3>
+                      <span className="text-xs font-bold text-[#243746] uppercase tracking-wider">{ad.brand}</span>
+                      <h3 className="font-black text-base sm:text-lg text-[#243746] mt-1">{ad.title}</h3>
                     </div>
                   </motion.div>
                 ))}
@@ -767,25 +767,25 @@ export default function Works() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-[#1e1e1e] rounded-3xl p-8 sm:p-10 md:p-14 text-center relative overflow-hidden mb-6">
+            className="bg-[#243746] rounded-3xl p-8 sm:p-10 md:p-14 text-center relative overflow-hidden mb-6">
             <motion.div
-              className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-40 bg-[#588ef4]/20 rounded-full blur-[80px]"
+              className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-40 bg-[#2f6b6a]/20 rounded-full blur-[80px]"
               animate={{ scale: [1, 1.15, 1], opacity: [0.5, 0.8, 0.5] }}
               transition={{ duration: 5, repeat: Infinity }} />
             <div className="relative z-10">
-              <p className="text-[#588ef4] text-xs font-bold tracking-widest uppercase mb-4">Ready to be our next case study?</p>
+              <p className="text-[#2f6b6a] text-xs font-bold tracking-widest uppercase mb-4">Ready to be our next case study?</p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-4">
-                Let's Build Something <span className="text-[#588ef4]">That Converts.</span>
+                Let's Build Something <span className="text-[#2f6b6a]">That Converts.</span>
               </h2>
               <p className="text-white/50 max-w-md mx-auto mb-8 text-sm px-4">
                 Every project in this portfolio started with one conversation. Let's have yours.
               </p>
               <motion.button
                 onClick={() => setModalOpen(true)}
-                className="relative bg-white text-[#588ef4] px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-black text-sm sm:text-base shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
+                className="relative bg-white text-[#2f6b6a] px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl font-black text-sm sm:text-base shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden"
                 whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-[#588ef4]/10 to-transparent -skew-x-12"
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-[#2f6b6a]/10 to-transparent -skew-x-12"
                   animate={{ x: ["-100%", "200%"] }}
                   transition={{ duration: 3, repeat: Infinity, repeatDelay: 2 }} />
                 <span className="relative">Book Free Strategy Call →</span>
@@ -793,7 +793,7 @@ export default function Works() {
               <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-6">
                 {["No commitment", "30-min call", "Custom plan"].map((item, i) => (
                   <span key={i} className="flex items-center gap-1.5 text-white/40 text-xs">
-                    <span className="text-[#588ef4]">✓</span> {item}
+                    <span className="text-[#2f6b6a]">✓</span> {item}
                   </span>
                 ))}
               </div>

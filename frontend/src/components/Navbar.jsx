@@ -40,11 +40,13 @@ export default function Navbar({ page, setPage }) {
           onClick={() => handleNav("home")}
           className="flex items-center gap-2 group"
         >
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#588ef4] to-[#beb9df] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
-            <span className="text-white font-black text-sm">R</span>
-          </div>
-          <span className="font-black text-xl text-[#1e1e1e] tracking-tight">
-            Rise<span className="text-[#588ef4]">WithMedia</span>
+          <img
+            src="/logo.png"
+            alt="Rise With Media Logo"
+            className="w-9 h-9 rounded-xl shadow-lg group-hover:scale-105 transition-transform duration-300"
+          />
+          <span className="font-black text-xl text-[#243746] tracking-tight">
+            Rise<span className="text-[#2f6b6a]">WithMedia</span>
           </span>
         </button>
 
@@ -54,11 +56,11 @@ export default function Navbar({ page, setPage }) {
             <button
               key={link.key}
               onClick={() => handleNav(link.key)}
-              className="relative text-sm font-semibold text-[#1e1e1e]/70 hover:text-[#588ef4] transition-colors duration-300 group py-1"
+              className="relative text-sm font-semibold text-[#243746]/70 hover:text-[#2f6b6a] transition-colors duration-300 group py-1"
             >
               {link.label}
               <span
-                className={`absolute bottom-0 left-0 h-[2px] bg-[#588ef4] rounded-full transition-all duration-300 ${
+                className={`absolute bottom-0 left-0 h-[2px] bg-[#2f6b6a] rounded-full transition-all duration-300 ${
                   page === link.key ? "w-full" : "w-0 group-hover:w-full"
                 }`}
               />
@@ -70,7 +72,7 @@ export default function Navbar({ page, setPage }) {
         <div className="hidden md:flex items-center gap-4">
           <motion.button
             onClick={() => handleNav("contact")}
-            className="bg-[#588ef4] text-white px-6 py-2.5 rounded-xl font-semibold text-sm shadow-lg shadow-[#588ef4]/25 hover:bg-[#3d6fd4] transition-all duration-300"
+            className="bg-[#2f6b6a] text-white px-6 py-2.5 rounded-xl font-semibold text-sm shadow-lg shadow-[#2f6b6a]/25 hover:bg-[#255756] transition-all duration-300"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
           >
@@ -85,17 +87,17 @@ export default function Navbar({ page, setPage }) {
           aria-label="Toggle menu"
         >
           <motion.span
-            className="block w-6 h-0.5 bg-[#1e1e1e] rounded-full origin-center"
+            className="block w-6 h-0.5 bg-[#243746] rounded-full origin-center"
             animate={menuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
             transition={{ duration: 0.3 }}
           />
           <motion.span
-            className="block w-6 h-0.5 bg-[#1e1e1e] rounded-full"
+            className="block w-6 h-0.5 bg-[#243746] rounded-full"
             animate={menuOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
             transition={{ duration: 0.2 }}
           />
           <motion.span
-            className="block w-6 h-0.5 bg-[#1e1e1e] rounded-full origin-center"
+            className="block w-6 h-0.5 bg-[#243746] rounded-full origin-center"
             animate={menuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
             transition={{ duration: 0.3 }}
           />
@@ -106,7 +108,7 @@ export default function Navbar({ page, setPage }) {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="md:hidden bg-white/95 backdrop-blur-xl border-t border-[#dadcf4]/50 px-6 pb-6 pt-4"
+            className="md:hidden bg-white/95 backdrop-blur-xl border-t border-[#ece3d4]/50 px-6 pb-6 pt-4"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -117,8 +119,8 @@ export default function Navbar({ page, setPage }) {
                 <button
                   key={link.key}
                   onClick={() => handleNav(link.key)}
-                  className={`text-left font-semibold text-base py-2 border-b border-[#dadcf4]/50 transition-colors ${
-                    page === link.key ? "text-[#588ef4]" : "text-[#1e1e1e]/80"
+                  className={`text-left font-semibold text-base py-2 border-b border-[#ece3d4]/50 transition-colors ${
+                    page === link.key ? "text-[#2f6b6a]" : "text-[#243746]/80"
                   }`}
                 >
                   {link.label}
@@ -126,7 +128,7 @@ export default function Navbar({ page, setPage }) {
               ))}
               <button
                 onClick={() => handleNav("contact")}
-                className="bg-[#588ef4] text-white px-6 py-3 rounded-xl font-semibold text-sm mt-2"
+                className="bg-[#2f6b6a] text-white px-6 py-3 rounded-xl font-semibold text-sm mt-2"
               >
                 Free Strategy Call
               </button>

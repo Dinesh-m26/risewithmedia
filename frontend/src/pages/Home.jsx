@@ -61,16 +61,16 @@ function Hero({ setPage }) {
   return (
     <section ref={ref} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
       {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#eef2ff] via-white to-[#f5f3ff] z-0" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#fbf7f2] via-[#f7f1e8] to-[#ece3d4] z-0" />
 
       {/* Animated blobs */}
       <motion.div
-        className="absolute top-[-80px] left-[-80px] w-[420px] h-[420px] rounded-full bg-[#588ef4]/20 blur-[80px]"
+        className="absolute top-[-80px] left-[-80px] w-[420px] h-[420px] rounded-full bg-[#2f6b6a]/20 blur-[80px]"
         animate={{ scale: [1, 1.15, 1], opacity: [0.5, 0.8, 0.5] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
-        className="absolute bottom-[-60px] right-[-60px] w-[340px] h-[340px] rounded-full bg-[#dadcf4]/60 blur-[70px]"
+        className="absolute bottom-[-60px] right-[-60px] w-[340px] h-[340px] rounded-full bg-[#ece3d4]/60 blur-[70px]"
         animate={{ scale: [1, 1.2, 1], opacity: [0.4, 0.7, 0.4] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
       />
@@ -79,7 +79,7 @@ function Hero({ setPage }) {
       <div
         className="absolute inset-0 z-0 opacity-[0.035]"
         style={{
-          backgroundImage: "linear-gradient(#588ef4 1px,transparent 1px),linear-gradient(90deg,#588ef4 1px,transparent 1px)",
+          backgroundImage: "linear-gradient(#2f6b6a 1px,transparent 1px),linear-gradient(90deg,#2f6b6a 1px,transparent 1px)",
           backgroundSize: "50px 50px",
         }}
       />
@@ -87,16 +87,16 @@ function Hero({ setPage }) {
       <motion.div style={{ y, opacity }} className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-28 pb-20">
         {/* Badge */}
         <motion.div variants={fadeUp} initial="hidden" animate="show" custom={0}
-          className="inline-flex items-center gap-2 bg-[#588ef4]/10 border border-[#588ef4]/25 text-[#588ef4] px-5 py-2 rounded-full text-sm font-semibold mb-8">
-          <span className="w-2 h-2 bg-[#588ef4] rounded-full animate-pulse" />
+          className="inline-flex items-center gap-2 bg-[#2f6b6a]/10 border border-[#2f6b6a]/25 text-[#2f6b6a] px-5 py-2 rounded-full text-sm font-semibold mb-8">
+          <span className="w-2 h-2 bg-[#2f6b6a] rounded-full animate-pulse" />
          Premium Digital Marketing Agency
         </motion.div>
 
         {/* Main Heading */}
         <motion.h1 variants={fadeUp} initial="hidden" animate="show" custom={1}
-          className="text-5xl md:text-7xl font-black text-[#1e1e1e] leading-[1.05] tracking-tight mb-6">
+          className="text-5xl md:text-7xl font-black text-[#243746] leading-[1.05] tracking-tight mb-6">
           We Build Brands<br />
-          <span className="bg-gradient-to-r from-[#588ef4] to-[#818cf8] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#2f6b6a] via-[#c9a46a] to-[#243746] bg-clip-text text-transparent">
             That Convert.
           </span>
         </motion.h1>
@@ -112,14 +112,14 @@ function Hero({ setPage }) {
           className="flex flex-wrap gap-4 justify-center mb-16">
           <motion.button
             onClick={() => setPage("contact")}
-            className="group bg-[#588ef4] text-white px-8 py-4 rounded-2xl font-bold text-base shadow-2xl shadow-[#588ef4]/30 hover:bg-[#3d6fd4] transition-all duration-300 flex items-center gap-2"
+            className="group bg-[#2f6b6a] text-white px-8 py-4 rounded-2xl font-bold text-base shadow-2xl shadow-[#2f6b6a]/30 hover:bg-[#255756] transition-all duration-300 flex items-center gap-2"
             whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
             Get Free Strategy Call
             <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
           </motion.button>
           <motion.button
             onClick={() => setPage("works")}
-            className="bg-white text-[#1e1e1e] px-8 py-4 rounded-2xl font-bold text-base border border-[#dadcf4] hover:border-[#588ef4] hover:bg-white transition-all duration-300 shadow-sm"
+            className="bg-white text-[#243746] px-8 py-4 rounded-2xl font-bold text-base border border-[#ece3d4] hover:border-[#2f6b6a] hover:bg-white transition-all duration-300 shadow-sm"
             whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
             View Our Work
           </motion.button>
@@ -135,8 +135,8 @@ function Hero({ setPage }) {
             { num: "5", suffix: "×", label: "Avg. ROI" },
           ].map((stat, i) => (
             <motion.div key={i} variants={fadeUp} custom={i}
-              className="bg-white/80 backdrop-blur-sm border border-[#dadcf4] rounded-2xl p-4 shadow-sm">
-              <div className="text-2xl font-black text-[#1e1e1e]">
+              className="bg-white/80 backdrop-blur-sm border border-[#ece3d4] rounded-2xl p-4 shadow-sm">
+              <div className="text-2xl font-black text-[#243746]">
                 <AnimatedCounter end={stat.num} suffix={stat.suffix} />
               </div>
               <div className="text-[#6b7280] text-xs mt-0.5">{stat.label}</div>
@@ -149,7 +149,7 @@ function Hero({ setPage }) {
           className="mt-16 flex flex-col items-center gap-2">
           <span className="text-[#9ca3af] text-xs tracking-widest uppercase">Scroll</span>
           <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-0.5 h-7 bg-gradient-to-b from-[#588ef4] to-transparent rounded-full" />
+            className="w-0.5 h-7 bg-gradient-to-b from-[#2f6b6a] to-transparent rounded-full" />
         </motion.div>
       </motion.div>
     </section>
@@ -174,7 +174,7 @@ function TrustBar() {
   ];
 
   return (
-    <div className="bg-white border-y border-[#dadcf4] py-8 overflow-hidden">
+    <div className="bg-white border-y border-[#ece3d4] py-8 overflow-hidden">
       {/* Fade edges */}
       <div className="relative">
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
@@ -248,11 +248,11 @@ function ServicesSection() {
       <div className="max-w-6xl mx-auto">
         <motion.div initial="hidden" animate={inView ? "show" : "hidden"} variants={stagger}
           className="text-center mb-16">
-          <motion.p variants={fadeUp} className="text-[#588ef4] text-sm font-bold tracking-widest uppercase mb-3">
+          <motion.p variants={fadeUp} className="text-[#2f6b6a] text-sm font-bold tracking-widest uppercase mb-3">
             What We Do
           </motion.p>
           <motion.h2 variants={fadeUp} custom={1}
-            className="text-4xl md:text-5xl font-black text-[#1e1e1e] mb-4">
+            className="text-4xl md:text-5xl font-black text-[#243746] mb-4">
             Services Built for Real Business Growth
           </motion.h2>
           <motion.p variants={fadeUp} custom={2} className="text-[#6b7280] max-w-xl mx-auto">
@@ -264,15 +264,15 @@ function ServicesSection() {
           className="grid md:grid-cols-3 gap-6">
           {services.map((s, i) => (
             <motion.div key={i} variants={fadeUp} custom={i}
-              className="group bg-[#f8f9ff] border border-[#dadcf4] rounded-3xl p-7 hover:border-[#588ef4]/40 hover:shadow-lg hover:shadow-[#588ef4]/8 transition-all duration-400"
+              className="group bg-[#f7f1e8] border border-[#ece3d4] rounded-3xl p-7 hover:border-[#2f6b6a]/40 hover:shadow-lg hover:shadow-[#2f6b6a]/8 transition-all duration-400"
               whileHover={{ y: -4 }}>
               <div className="text-4xl mb-4">{s.icon}</div>
-              <h3 className="text-lg font-bold text-[#1e1e1e] mb-2">{s.title}</h3>
+              <h3 className="text-lg font-bold text-[#243746] mb-2">{s.title}</h3>
               <p className="text-[#6b7280] text-sm mb-5">{s.pitch}</p>
               <ul className="space-y-2">
                 {s.items.map((item, j) => (
                   <li key={j} className="flex items-center gap-2 text-sm text-[#374151]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#588ef4] flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#2f6b6a] flex-shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -296,26 +296,26 @@ function HowItWorks() {
     { icon: "📊", title: "Results & Scaling", desc: "We track KPIs weekly, refine what works, and scale the winning campaigns." },
   ];
   return (
-    <section ref={ref} className="bg-[#f8f9ff] py-24 px-6">
+    <section ref={ref} className="bg-[#f7f1e8] py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <motion.div initial="hidden" animate={inView ? "show" : "hidden"} variants={stagger} className="text-center mb-16">
-          <motion.p variants={fadeUp} className="text-[#588ef4] text-sm font-bold tracking-widest uppercase mb-3">Our Process</motion.p>
-          <motion.h2 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-black text-[#1e1e1e] mb-4">How We Work</motion.h2>
+          <motion.p variants={fadeUp} className="text-[#2f6b6a] text-sm font-bold tracking-widest uppercase mb-3">Our Process</motion.p>
+          <motion.h2 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-black text-[#243746] mb-4">How We Work</motion.h2>
           <motion.p variants={fadeUp} custom={2} className="text-[#6b7280] max-w-md mx-auto">A simple, proven process to get you from zero to consistent growth.</motion.p>
         </motion.div>
 
         <motion.div initial="hidden" animate={inView ? "show" : "hidden"} variants={stagger}
           className="grid md:grid-cols-4 gap-6 relative">
-          <div className="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-[#dadcf4] to-transparent" />
+          <div className="hidden md:block absolute top-10 left-[12.5%] right-[12.5%] h-px bg-gradient-to-r from-transparent via-[#ece3d4] to-transparent" />
           {steps.map((step, i) => (
             <motion.div key={i} variants={fadeUp} custom={i} className="text-center relative">
-              <div className="relative mx-auto w-20 h-20 rounded-2xl bg-white border border-[#dadcf4] shadow-sm flex items-center justify-center text-3xl mb-4">
+              <div className="relative mx-auto w-20 h-20 rounded-2xl bg-white border border-[#ece3d4] shadow-sm flex items-center justify-center text-3xl mb-4">
                 {step.icon}
-                <div className="absolute -top-2 -right-2 bg-[#588ef4] text-white text-xs font-black w-6 h-6 rounded-full flex items-center justify-center shadow">
+                <div className="absolute -top-2 -right-2 bg-[#2f6b6a] text-white text-xs font-black w-6 h-6 rounded-full flex items-center justify-center shadow">
                   {i + 1}
                 </div>
               </div>
-              <h3 className="text-[#1e1e1e] font-bold mb-2 text-sm">{step.title}</h3>
+              <h3 className="text-[#243746] font-bold mb-2 text-sm">{step.title}</h3>
               <p className="text-[#6b7280] text-sm leading-relaxed">{step.desc}</p>
             </motion.div>
           ))}
@@ -331,9 +331,9 @@ function AISection() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const items = ["WhatsApp Automation", "CRM Setup", "Auto Reply Bots", "Lead Tracking Systems", "AI Tools for Business", "Custom Automations"];
   return (
-    <section ref={ref} className="bg-[#1e1e1e] py-24 px-6 relative overflow-hidden">
-      <div className="absolute top-[-80px] right-[-80px] w-[340px] h-[340px] rounded-full bg-[#588ef4]/15 blur-[90px]" />
-      <div className="absolute bottom-[-60px] left-[-60px] w-[260px] h-[260px] rounded-full bg-[#dadcf4]/10 blur-[80px]" />
+    <section ref={ref} className="bg-[#243746] py-24 px-6 relative overflow-hidden">
+      <div className="absolute top-[-80px] right-[-80px] w-[340px] h-[340px] rounded-full bg-[#2f6b6a]/15 blur-[90px]" />
+      <div className="absolute bottom-[-60px] left-[-60px] w-[260px] h-[260px] rounded-full bg-[#ece3d4]/10 blur-[80px]" />
       <div className="absolute inset-0 opacity-[0.04]"
         style={{ backgroundImage: "linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)", backgroundSize: "50px 50px" }} />
 
@@ -341,7 +341,7 @@ function AISection() {
         <motion.div initial="hidden" animate={inView ? "show" : "hidden"} variants={stagger}
           className="grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <motion.p variants={fadeUp} className="text-[#588ef4] text-sm font-bold tracking-widest uppercase mb-3">Premium Service</motion.p>
+            <motion.p variants={fadeUp} className="text-[#2f6b6a] text-sm font-bold tracking-widest uppercase mb-3">Premium Service</motion.p>
             <motion.h2 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-black text-white mb-4 leading-tight">
               AI Automation<br />& CRM Solutions
             </motion.h2>
@@ -353,7 +353,7 @@ function AISection() {
               {items.map((item, i) => (
                 <motion.div key={i} variants={fadeUp} custom={i}
                   className="flex items-center gap-2 text-sm text-[#d1d5db]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#588ef4] flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#2f6b6a] flex-shrink-0" />
                   {item}
                 </motion.div>
               ))}
@@ -362,7 +362,7 @@ function AISection() {
 
           <motion.div variants={fadeUp} custom={3} className="relative flex items-center justify-center">
             <motion.div animate={{ rotate: 360 }} transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="absolute w-56 h-56 rounded-full border border-dashed border-[#588ef4]/20" />
+              className="absolute w-56 h-56 rounded-full border border-dashed border-[#2f6b6a]/20" />
 
             <div className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-3xl p-8 text-center max-w-xs w-full">
               <div className="text-5xl mb-4">🤖</div>
@@ -374,9 +374,9 @@ function AISection() {
 
             <div className="absolute left-0 top-4 space-y-2">
               {[
-                { label: "Response Rate", val: "99%", color: "bg-[#749985]" },
-                { label: "Lead Capture", val: "24/7", color: "bg-[#588ef4]" },
-                { label: "Time Saved", val: "4h/day", color: "bg-[#beb9df]" },
+                { label: "Response Rate", val: "99%", color: "bg-[#243746]" },
+                { label: "Lead Capture", val: "24/7", color: "bg-[#2f6b6a]" },
+                { label: "Time Saved", val: "4h/day", color: "bg-[#c9a46a]" },
               ].map((m, i) => (
                 <motion.div key={i} initial={{ x: -30, opacity: 0 }} animate={inView ? { x: 0, opacity: 1 } : {}}
                   transition={{ delay: 0.4 + i * 0.15, duration: 0.5 }}
@@ -391,7 +391,7 @@ function AISection() {
               🔔 New Lead
             </motion.div>
             <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 3.5, repeat: Infinity, delay: 1 }}
-              className="absolute right-0 bottom-6 bg-[#588ef4]/20 border border-[#588ef4]/30 backdrop-blur-sm rounded-2xl px-3 py-2 text-xs text-white font-semibold">
+              className="absolute right-0 bottom-6 bg-[#2f6b6a]/20 border border-[#2f6b6a]/30 backdrop-blur-sm rounded-2xl px-3 py-2 text-xs text-white font-semibold">
               ✅ Auto-replied
             </motion.div>
           </motion.div>
@@ -414,24 +414,24 @@ function ResultsSection() {
     <section ref={ref} className="bg-white py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <motion.div initial="hidden" animate={inView ? "show" : "hidden"} variants={stagger} className="text-center mb-16">
-          <motion.p variants={fadeUp} className="text-[#588ef4] text-sm font-bold tracking-widest uppercase mb-3">Real Results</motion.p>
-          <motion.h2 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-black text-[#1e1e1e] mb-4">Numbers That Speak</motion.h2>
+          <motion.p variants={fadeUp} className="text-[#2f6b6a] text-sm font-bold tracking-widest uppercase mb-3">Real Results</motion.p>
+          <motion.h2 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-black text-[#243746] mb-4">Numbers That Speak</motion.h2>
           <motion.p variants={fadeUp} custom={2} className="text-[#6b7280] max-w-md mx-auto">Not claims — actual results from real clients across industries.</motion.p>
         </motion.div>
         <motion.div initial="hidden" animate={inView ? "show" : "hidden"} variants={stagger}
           className="grid md:grid-cols-3 gap-6">
           {cases.map((c, i) => (
             <motion.div key={i} variants={fadeUp} custom={i}
-              className="group bg-[#f8f9ff] border border-[#dadcf4] rounded-3xl p-8 hover:border-[#588ef4]/40 hover:shadow-lg hover:shadow-[#588ef4]/8 transition-all duration-400"
+              className="group bg-[#f7f1e8] border border-[#ece3d4] rounded-3xl p-8 hover:border-[#2f6b6a]/40 hover:shadow-lg hover:shadow-[#2f6b6a]/8 transition-all duration-400"
               whileHover={{ y: -5 }}>
-              <div className="inline-flex items-center bg-white border border-[#dadcf4] rounded-full px-3 py-1 text-xs text-[#6b7280] mb-6 shadow-sm">
+              <div className="inline-flex items-center bg-white border border-[#ece3d4] rounded-full px-3 py-1 text-xs text-[#6b7280] mb-6 shadow-sm">
                 {c.tag}
               </div>
-              <div className="text-4xl font-black text-[#588ef4] mb-1">
+              <div className="text-4xl font-black text-[#2f6b6a] mb-1">
                 <AnimatedCounter end={c.metric} suffix={c.suffix} />
               </div>
               <p className="text-[#6b7280] text-sm mb-4">{c.label}</p>
-              <p className="text-[#1e1e1e] font-semibold text-sm">{c.client}</p>
+              <p className="text-[#243746] font-semibold text-sm">{c.client}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -453,20 +453,20 @@ function WhyUs() {
     { icon: "🌐", title: "Multi-Channel Expertise", desc: "From Instagram to Google Ads — we manage your entire digital presence." },
   ];
   return (
-    <section ref={ref} className="bg-[#f8f9ff] py-24 px-6">
+    <section ref={ref} className="bg-[#f7f1e8] py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <motion.div initial="hidden" animate={inView ? "show" : "hidden"} variants={stagger} className="text-center mb-16">
-          <motion.p variants={fadeUp} className="text-[#588ef4] text-sm font-bold tracking-widest uppercase mb-3">Why Us</motion.p>
-          <motion.h2 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-black text-[#1e1e1e] mb-4">What Makes Us Different</motion.h2>
+          <motion.p variants={fadeUp} className="text-[#2f6b6a] text-sm font-bold tracking-widest uppercase mb-3">Why Us</motion.p>
+          <motion.h2 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-black text-[#243746] mb-4">What Makes Us Different</motion.h2>
         </motion.div>
         <motion.div initial="hidden" animate={inView ? "show" : "hidden"} variants={stagger}
           className="grid md:grid-cols-3 gap-5">
           {reasons.map((r, i) => (
             <motion.div key={i} variants={fadeUp} custom={i}
-              className="group bg-white border border-[#dadcf4] rounded-2xl p-6 hover:border-[#588ef4]/40 hover:shadow-md transition-all duration-300"
+              className="group bg-white border border-[#ece3d4] rounded-2xl p-6 hover:border-[#2f6b6a]/40 hover:shadow-md transition-all duration-300"
               whileHover={{ y: -3 }}>
               <div className="text-3xl mb-3">{r.icon}</div>
-              <h3 className="text-[#1e1e1e] font-bold mb-2">{r.title}</h3>
+              <h3 className="text-[#243746] font-bold mb-2">{r.title}</h3>
               <p className="text-[#6b7280] text-sm leading-relaxed">{r.desc}</p>
             </motion.div>
           ))}
@@ -489,25 +489,25 @@ function Testimonials() {
     <section ref={ref} className="bg-white py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <motion.div initial="hidden" animate={inView ? "show" : "hidden"} variants={stagger} className="text-center mb-16">
-          <motion.p variants={fadeUp} className="text-[#588ef4] text-sm font-bold tracking-widest uppercase mb-3">Testimonials</motion.p>
-          <motion.h2 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-black text-[#1e1e1e] mb-4">What Clients Say</motion.h2>
+          <motion.p variants={fadeUp} className="text-[#2f6b6a] text-sm font-bold tracking-widest uppercase mb-3">Testimonials</motion.p>
+          <motion.h2 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-black text-[#243746] mb-4">What Clients Say</motion.h2>
         </motion.div>
         <motion.div initial="hidden" animate={inView ? "show" : "hidden"} variants={stagger}
           className="grid md:grid-cols-3 gap-6">
           {reviews.map((r, i) => (
             <motion.div key={i} variants={fadeUp} custom={i}
-              className="bg-[#f8f9ff] border border-[#dadcf4] rounded-3xl p-7 hover:border-[#588ef4]/40 hover:shadow-md transition-all duration-300"
+              className="bg-[#f7f1e8] border border-[#ece3d4] rounded-3xl p-7 hover:border-[#2f6b6a]/40 hover:shadow-md transition-all duration-300"
               whileHover={{ y: -4 }}>
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, j) => <span key={j} className="text-yellow-400 text-sm">★</span>)}
               </div>
               <p className="text-[#374151] text-sm leading-relaxed mb-6">"{r.text}"</p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#588ef4] to-[#dadcf4] flex items-center justify-center text-white font-bold text-sm">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#2f6b6a] to-[#ece3d4] flex items-center justify-center text-white font-bold text-sm">
                   {r.name[0]}
                 </div>
                 <div>
-                  <p className="text-[#1e1e1e] font-semibold text-sm">{r.name}</p>
+                  <p className="text-[#243746] font-semibold text-sm">{r.name}</p>
                   <p className="text-[#9ca3af] text-xs">{r.role}</p>
                 </div>
               </div>
@@ -532,22 +532,22 @@ function FAQ() {
     { q: "What do you need from me to get started?", a: "Very little. We do a 30-min onboarding call, collect your brand assets, and handle the rest. We're built to minimize effort on your end." },
   ];
   return (
-    <section ref={ref} className="bg-[#f8f9ff] py-24 px-6">
+    <section ref={ref} className="bg-[#f7f1e8] py-24 px-6">
       <div className="max-w-3xl mx-auto">
         <motion.div initial="hidden" animate={inView ? "show" : "hidden"} variants={stagger} className="text-center mb-16">
-          <motion.p variants={fadeUp} className="text-[#588ef4] text-sm font-bold tracking-widest uppercase mb-3">FAQ</motion.p>
-          <motion.h2 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-black text-[#1e1e1e] mb-4">Common Questions</motion.h2>
+          <motion.p variants={fadeUp} className="text-[#2f6b6a] text-sm font-bold tracking-widest uppercase mb-3">FAQ</motion.p>
+          <motion.h2 variants={fadeUp} custom={1} className="text-4xl md:text-5xl font-black text-[#243746] mb-4">Common Questions</motion.h2>
         </motion.div>
         <motion.div initial="hidden" animate={inView ? "show" : "hidden"} variants={stagger} className="space-y-3">
           {faqs.map((faq, i) => (
             <motion.div key={i} variants={fadeUp} custom={i}
-              className="border border-[#dadcf4] rounded-2xl overflow-hidden bg-white">
+              className="border border-[#ece3d4] rounded-2xl overflow-hidden bg-white">
               <button
                 onClick={() => setOpen(open === i ? null : i)}
-                className="w-full text-left px-6 py-5 flex items-center justify-between text-[#1e1e1e] font-semibold hover:bg-[#f8f9ff] transition-colors">
+                className="w-full text-left px-6 py-5 flex items-center justify-between text-[#243746] font-semibold hover:bg-[#f7f1e8] transition-colors">
                 {faq.q}
                 <motion.span animate={{ rotate: open === i ? 45 : 0 }} transition={{ duration: 0.25 }}
-                  className="text-[#588ef4] text-xl flex-shrink-0 ml-4">+</motion.span>
+                  className="text-[#2f6b6a] text-xl flex-shrink-0 ml-4">+</motion.span>
               </button>
               <AnimatePresence>
                 {open === i && (
@@ -570,8 +570,8 @@ function CTAStrip({ setPage }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   return (
-    <section ref={ref} className="bg-[#1e1e1e] py-24 px-6 relative overflow-hidden">
-      <div className="absolute top-[-60px] left-1/2 -translate-x-1/2 w-[500px] h-[260px] bg-[#588ef4]/10 rounded-full blur-[100px]" />
+    <section ref={ref} className="bg-[#243746] py-24 px-6 relative overflow-hidden">
+      <div className="absolute top-[-60px] left-1/2 -translate-x-1/2 w-[500px] h-[260px] bg-[#2f6b6a]/10 rounded-full blur-[100px]" />
       <motion.div initial="hidden" animate={inView ? "show" : "hidden"} variants={stagger}
         className="max-w-3xl mx-auto text-center relative z-10">
         <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-black text-white mb-4">
@@ -582,14 +582,14 @@ function CTAStrip({ setPage }) {
         </motion.p>
         <motion.button variants={fadeUp} custom={2}
           onClick={() => setPage("contact")}
-          className="bg-white text-[#588ef4] px-10 py-4 rounded-2xl font-black text-base shadow-xl hover:shadow-2xl transition-all duration-300"
+          className="bg-white text-[#2f6b6a] px-10 py-4 rounded-2xl font-black text-base shadow-xl hover:shadow-2xl transition-all duration-300"
           whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
           Book Free Strategy Call →
         </motion.button>
         <motion.div variants={fadeUp} custom={3} className="flex flex-wrap items-center justify-center gap-6 mt-8">
           {["30-min call", "Custom plan", "No commitment"].map((item, i) => (
             <span key={i} className="flex items-center gap-1.5 text-[#9ca3af] text-sm">
-              <span className="text-[#588ef4]">✓</span> {item}
+              <span className="text-[#2f6b6a]">✓</span> {item}
             </span>
           ))}
         </motion.div>

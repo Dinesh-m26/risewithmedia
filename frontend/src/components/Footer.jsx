@@ -52,17 +52,17 @@ export default function Footer({ setPage }) {
   ];
 
   return (
-    <footer className="bg-[#1e1e1e] text-white pt-20 pb-8">
+    <footer className="bg-[#243746] text-white pt-20 pb-8">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-14 border-b border-white/10">
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-5">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#588ef4] to-[#beb9df] flex items-center justify-center">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#2f6b6a] to-[#c9a46a] flex items-center justify-center">
                 <span className="text-white font-black text-sm">R</span>
               </div>
               <span className="font-black text-xl tracking-tight">
-                Rise<span className="text-[#588ef4]">WithMedia</span>
+                Rise<span className="text-[#2f6b6a]">WithMedia</span>
               </span>
             </div>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs mb-6">
@@ -75,7 +75,7 @@ export default function Footer({ setPage }) {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl bg-white/10 hover:bg-[#588ef4] flex items-center justify-center transition-colors duration-300"
+                  className="w-10 h-10 rounded-xl bg-white/10 hover:bg-[#2f6b6a] flex items-center justify-center transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label={s.name}
@@ -94,7 +94,7 @@ export default function Footer({ setPage }) {
                 <li key={s}>
                   <button
                     onClick={() => setPage("home")}
-                    className="text-sm text-white/60 hover:text-[#588ef4] transition-colors duration-300 text-left"
+                    className="text-sm text-white/60 hover:text-[#2f6b6a] transition-colors duration-300 text-left"
                   >
                     {s}
                   </button>

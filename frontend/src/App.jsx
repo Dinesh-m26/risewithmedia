@@ -53,7 +53,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#fdfcfd] font-['Plus_Jakarta_Sans']">
+    <div className="min-h-screen bg-[#fbf7f2] font-['Plus_Jakarta_Sans']">
       <Navbar page={page} setPage={setPage} />
       <AnimatePresence mode="wait">
         <motion.div

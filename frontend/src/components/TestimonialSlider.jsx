@@ -6,7 +6,7 @@ const testimonials = [
     name: "Ahkila",
     role: "Founder, Krin Brin School",
     avatar: "A",
-    avatarBg: "from-[#588ef4] to-[#beb9df]",
+    avatarBg: "from-[#2f6b6a] to-[#c9a46a]",
     rating: 5,
     text: "Within 3 months we went from 0 to 4 lakh in monthly revenue. The team just gets it — strategy, execution, everything.",
   },
@@ -14,7 +14,7 @@ const testimonials = [
     name: "Saranya",
     role: "Founder, Saranya Elite Bridal Studio",
     avatar: "S",
-    avatarBg: "from-[#749985] to-[#dadcf4]",
+    avatarBg: "from-[#243746] to-[#ece3d4]",
     rating: 5,
     text: "I was getting 45 leads a month. Now I get 10+ qualified leads monthly. The WhatsApp automation alone saved me hours.",
   },
@@ -22,7 +22,7 @@ const testimonials = [
     name: "Prem Charlesr",
     role: "Founder, Allinov",
     avatar: "P",
-    avatarBg: "from-[#beb9df] to-[#588ef4]",
+    avatarBg: "from-[#c9a46a] to-[#2f6b6a]",
     rating: 5,
     text: "I've hired agencies before — these guys are a completely different level.",
   },
@@ -32,7 +32,7 @@ function StarRating({ count }) {
   return (
     <div className="flex gap-1">
       {Array.from({ length: count }).map((_, i) => (
-        <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#588ef4">
+        <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#2f6b6a">
           <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
         </svg>
       ))}
@@ -79,14 +79,14 @@ export default function TestimonialSlider() {
             initial="enter"
             animate="center"
             exit="exit"
-            className="bg-white border border-[#dadcf4]/60 rounded-3xl p-10 shadow-xl shadow-[#beb9df]/20"
+            className="bg-white border border-[#ece3d4]/60 rounded-3xl p-10 shadow-xl shadow-[#c9a46a]/20"
           >
             {/* Quote mark */}
-            <div className="text-7xl leading-none font-black text-[#588ef4]/15 mb-4 select-none">"</div>
+            <div className="text-7xl leading-none font-black text-[#2f6b6a]/15 mb-4 select-none">"</div>
 
             <StarRating count={testimonials[current].rating} />
 
-            <p className="text-[#1e1e1e]/70 text-lg leading-relaxed mt-4 mb-8 italic">
+            <p className="text-[#243746]/70 text-lg leading-relaxed mt-4 mb-8 italic">
               "{testimonials[current].text}"
             </p>
 
@@ -95,8 +95,8 @@ export default function TestimonialSlider() {
                 {testimonials[current].avatar}
               </div>
               <div>
-                <p className="font-bold text-[#1e1e1e]">{testimonials[current].name}</p>
-                <p className="text-sm text-[#1e1e1e]/50">{testimonials[current].role}</p>
+                <p className="font-bold text-[#243746]">{testimonials[current].name}</p>
+                <p className="text-sm text-[#243746]/50">{testimonials[current].role}</p>
               </div>
             </div>
           </motion.div>
@@ -111,7 +111,7 @@ export default function TestimonialSlider() {
               key={i}
               onClick={() => goTo(i, i > current ? 1 : -1)}
               className={`transition-all duration-300 rounded-full ${
-                i === current ? "w-8 h-2 bg-[#588ef4]" : "w-2 h-2 bg-[#dadcf4]"
+                i === current ? "w-8 h-2 bg-[#2f6b6a]" : "w-2 h-2 bg-[#ece3d4]"
               }`}
             />
           ))}
@@ -119,7 +119,7 @@ export default function TestimonialSlider() {
         <div className="flex gap-3">
           <motion.button
             onClick={prev}
-            className="w-11 h-11 rounded-full bg-white border border-[#dadcf4] hover:border-[#588ef4] hover:bg-[#588ef4] hover:text-white text-[#1e1e1e] flex items-center justify-center transition-colors duration-300 shadow-sm"
+            className="w-11 h-11 rounded-full bg-white border border-[#ece3d4] hover:border-[#2f6b6a] hover:bg-[#2f6b6a] hover:text-white text-[#243746] flex items-center justify-center transition-colors duration-300 shadow-sm"
             whileTap={{ scale: 0.9 }}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -128,7 +128,7 @@ export default function TestimonialSlider() {
           </motion.button>
           <motion.button
             onClick={next}
-            className="w-11 h-11 rounded-full bg-[#588ef4] text-white hover:bg-[#3d6fd4] flex items-center justify-center transition-colors duration-300 shadow-lg shadow-[#588ef4]/30"
+            className="w-11 h-11 rounded-full bg-[#2f6b6a] text-white hover:bg-[#255756] flex items-center justify-center transition-colors duration-300 shadow-lg shadow-[#2f6b6a]/30"
             whileTap={{ scale: 0.9 }}
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

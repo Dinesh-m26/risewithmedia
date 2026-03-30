@@ -5,21 +5,37 @@
   scroll-behavior: smooth;
 }
 
+:root {
+  --brand-ink: #243746;
+  --brand-gold: #2f6b6a;
+  --brand-gold-deep: #255756;
+  --brand-champagne: #ece3d4;
+  --brand-cream: #fbf7f2;
+}
+
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: #fdfcfd;
-  color: #1e1e1e;
+  background:
+    radial-gradient(circle at top left, rgba(47, 107, 106, 0.14), transparent 0 32%),
+    radial-gradient(circle at bottom right, rgba(36, 55, 70, 0.08), transparent 0 30%),
+    var(--brand-cream);
+  color: var(--brand-ink);
   margin: 0;
   padding: 0;
+}
+
+::selection {
+  background: var(--brand-gold);
+  color: white;
 }
 
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #fdfcfd;
+  background: #fbf7f2;
 }
 ::-webkit-scrollbar-thumb {
-  background: #588ef4;
+  background: #2f6b6a;
   border-radius: 9999px;
 }
