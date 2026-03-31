@@ -89,7 +89,7 @@ function Hero({ setPage }) {
         <motion.div variants={fadeUp} initial="hidden" animate="show" custom={0}
           className="inline-flex items-center gap-2 bg-[#06b6d4]/10 border border-[#06b6d4]/25 text-[#06b6d4] px-5 py-2 rounded-full text-sm font-semibold mb-8">
           <span className="w-2 h-2 bg-[#06b6d4] rounded-full animate-pulse" />
-         Digital Marketing Agency in Krishnagiri, Tamil Nadu
+         Premium Digital Marketing Agency
         </motion.div>
 
         {/* Main Heading */}
@@ -104,7 +104,7 @@ function Hero({ setPage }) {
         {/* Subheading */}
         <motion.p variants={fadeUp} initial="hidden" animate="show" custom={2}
           className="text-[#6b7280] text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
-          Rise With Media helps businesses in Krishnagiri, Hosur, Dharmapuri, Salem, Bengaluru, across Tamil Nadu, and all regions grow with social media marketing, Meta ads, websites, reels, and data-driven execution.
+          Rise With Media helps businesses grow with social media marketing, Meta ads, websites, reels, and data-driven execution across every region.
         </motion.p>
 
         {/* CTAs */}
@@ -256,7 +256,7 @@ function ServicesSection() {
             Services Built for Real Business Growth
           </motion.h2>
           <motion.p variants={fadeUp} custom={2} className="text-[#6b7280] max-w-2xl mx-auto">
-            We support brands in Krishnagiri, Tamil Nadu and across nearby regions with measurable digital growth strategies — not vanity metrics.
+            We support brands with measurable digital growth strategies built for real business results — not vanity metrics.
           </motion.p>
         </motion.div>
 
