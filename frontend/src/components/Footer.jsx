@@ -52,18 +52,27 @@ export default function Footer({ setPage }) {
   ];
 
   return (
-    <footer className="bg-[#243746] text-white pt-20 pb-8">
+    <footer className="bg-[#0f172a] text-white pt-20 pb-8">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-14 border-b border-white/10">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-5">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#2f6b6a] to-[#c9a46a] flex items-center justify-center">
-                <span className="text-white font-black text-sm">R</span>
+            <div className="flex items-center gap-3 mb-5">
+              <div className="flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-lg shadow-[#06b6d4]/15 ring-1 ring-white/10">
+                <img
+                  src="/logo.png"
+                  alt="Rise With Media"
+                  className="h-8 w-8 object-contain"
+                />
               </div>
-              <span className="font-black text-xl tracking-tight">
-                Rise<span className="text-[#2f6b6a]">WithMedia</span>
-              </span>
+              <div>
+                <span className="block font-black text-xl tracking-tight">
+                  Rise<span className="text-[#06b6d4]">WithMedia</span>
+                </span>
+                <span className="block text-[10px] font-semibold uppercase tracking-[0.24em] text-white/40">
+                  Digital Growth Studio
+                </span>
+              </div>
             </div>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs mb-6">
               We build brands that convert. Your growth partner for content, ads, websites, and AI automation.
@@ -75,7 +84,7 @@ export default function Footer({ setPage }) {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl bg-white/10 hover:bg-[#2f6b6a] flex items-center justify-center transition-colors duration-300"
+                  className="w-10 h-10 rounded-xl bg-white/10 hover:bg-[#06b6d4] flex items-center justify-center transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   aria-label={s.name}
@@ -94,7 +103,7 @@ export default function Footer({ setPage }) {
                 <li key={s}>
                   <button
                     onClick={() => setPage("home")}
-                    className="text-sm text-white/60 hover:text-[#2f6b6a] transition-colors duration-300 text-left"
+                    className="text-sm text-white/60 hover:text-[#06b6d4] transition-colors duration-300 text-left"
                   >
                     {s}
                   </button>

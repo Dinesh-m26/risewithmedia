@@ -32,7 +32,7 @@ const contactInfo = [
     label: "Phone",
     value: "+91 9345254648",
     href: "tel:+919345254648",
-    color: "from-[#2f6b6a]/15 to-[#ece3d4]/30",
+    color: "from-[#06b6d4]/15 to-[#dff6ff]/30",
   },
   {
     icon: (
@@ -44,7 +44,7 @@ const contactInfo = [
     label: "Email",
     value: "hello@risewithmedia.com",
     href: "mailto:hello@risewithmedia.com",
-    color: "from-[#c9a46a]/30 to-[#ece3d4]/20",
+    color: "from-[#67e8f9]/30 to-[#dff6ff]/20",
   },
   {
     icon: (
@@ -56,7 +56,7 @@ const contactInfo = [
     label: "Location",
     value: "Krishnagiri, Tamil Nadu, India",
     href: null,
-    color: "from-[#243746]/20 to-[#ece3d4]/20",
+    color: "from-[#0f172a]/20 to-[#dff6ff]/20",
   },
 ];
 
@@ -71,8 +71,8 @@ function InputField({ label, name, type = "text", value, onChange, placeholder, 
   const [focused, setFocused] = useState(false);
   return (
     <div className="relative">
-      <label className="text-xs font-bold text-[#243746]/45 uppercase tracking-wider mb-1.5 block">
-        {label} {required && <span className="text-[#2f6b6a]">*</span>}
+      <label className="text-xs font-bold text-[#0f172a]/45 uppercase tracking-wider mb-1.5 block">
+        {label} {required && <span className="text-[#06b6d4]">*</span>}
       </label>
       <div className={`relative transition-all duration-300 ${focused ? "drop-shadow-sm" : ""}`}>
         <input
@@ -84,10 +84,10 @@ function InputField({ label, name, type = "text", value, onChange, placeholder, 
           onBlur={() => setFocused(false)}
           placeholder={placeholder}
           required={required}
-          className="w-full px-4 py-3.5 rounded-xl bg-[#fbf7f2] border border-[#ece3d4] focus:border-[#2f6b6a] focus:ring-2 focus:ring-[#2f6b6a]/15 outline-none text-sm text-[#243746] transition-all placeholder:text-[#243746]/25 font-medium"
+          className="w-full px-4 py-3.5 rounded-xl bg-[#f0fbff] border border-[#dff6ff] focus:border-[#06b6d4] focus:ring-2 focus:ring-[#06b6d4]/15 outline-none text-sm text-[#0f172a] transition-all placeholder:text-[#0f172a]/25 font-medium"
         />
         <motion.div
-          className="absolute right-3.5 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#2f6b6a]"
+          className="absolute right-3.5 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-[#06b6d4]"
           animate={{ opacity: focused ? 1 : 0, scale: focused ? 1 : 0 }}
           transition={{ duration: 0.2 }}
         />
@@ -100,8 +100,8 @@ function InputField({ label, name, type = "text", value, onChange, placeholder, 
 function PillSelector({ label, name, options, value, onChange, required }) {
   return (
     <div>
-      <label className="text-xs font-bold text-[#243746]/45 uppercase tracking-wider mb-2 block">
-        {label} {required && <span className="text-[#2f6b6a]">*</span>}
+      <label className="text-xs font-bold text-[#0f172a]/45 uppercase tracking-wider mb-2 block">
+        {label} {required && <span className="text-[#06b6d4]">*</span>}
       </label>
       <div className="flex flex-wrap gap-2">
         {options.map((s) => (
@@ -111,8 +111,8 @@ function PillSelector({ label, name, options, value, onChange, required }) {
             onClick={() => onChange({ target: { name, value: s } })}
             className={`px-4 py-2 rounded-xl text-xs font-bold border transition-all duration-200 ${
               value === s
-                ? "bg-[#2f6b6a] text-white border-[#2f6b6a] shadow-md shadow-[#2f6b6a]/20"
-                : "bg-[#fbf7f2] text-[#243746]/55 border-[#ece3d4] hover:border-[#2f6b6a]/40 hover:text-[#2f6b6a]"
+                ? "bg-[#06b6d4] text-white border-[#06b6d4] shadow-md shadow-[#06b6d4]/20"
+                : "bg-[#f0fbff] text-[#0f172a]/55 border-[#dff6ff] hover:border-[#06b6d4]/40 hover:text-[#06b6d4]"
             }`}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}>
@@ -169,11 +169,11 @@ export default function Contact() {
   };
 
   return (
-    <div className="pt-24 pb-20 min-h-screen bg-white relative overflow-hidden">
+    <div className="pt-28 sm:pt-32 pb-20 min-h-screen bg-white relative overflow-hidden">
 
       {/* Background blobs */}
-      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#ece3d4]/25 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/4 pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#2f6b6a]/8 rounded-full blur-[100px] translate-x-1/3 translate-y-1/4 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#dff6ff]/25 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/4 pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#06b6d4]/8 rounded-full blur-[100px] translate-x-1/3 translate-y-1/4 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -184,17 +184,17 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}>
 
-            <div className="inline-flex items-center gap-2 bg-[#ece3d4]/60 text-[#2f6b6a] text-xs font-bold px-4 py-2 rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 bg-[#dff6ff]/60 text-[#06b6d4] text-xs font-bold px-4 py-2 rounded-full mb-6">
               ✦ Get in Touch
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-black text-[#243746] leading-tight mb-5">
+            <h1 className="text-5xl md:text-6xl font-black text-[#0f172a] leading-tight mb-5">
               Let's Grow Your<br />
-              <span className="bg-gradient-to-r from-[#2f6b6a] to-[#243746] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#06b6d4] to-[#0f172a] bg-clip-text text-transparent">
                 Business.
               </span>
             </h1>
-            <p className="text-[#243746]/50 text-lg leading-relaxed max-w-md mb-10">
+            <p className="text-[#0f172a]/50 text-lg leading-relaxed max-w-md mb-10">
               Ready to transform your digital presence? Tell us about your business and we'll craft a custom strategy to accelerate your growth.
             </p>
 
@@ -203,9 +203,9 @@ export default function Contact() {
                 <motion.div key={i}
                   initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 + i * 0.1 }}
-                  className="flex items-center gap-2 bg-[#f7f1e8] border border-[#ece3d4] rounded-full px-4 py-2">
+                  className="flex items-center gap-2 bg-[#f7fcff] border border-[#dff6ff] rounded-full px-4 py-2">
                   <span className="text-sm">{t.icon}</span>
-                  <span className="text-xs font-bold text-[#243746]/60">{t.text}</span>
+                  <span className="text-xs font-bold text-[#0f172a]/60">{t.text}</span>
                 </motion.div>
               ))}
             </div>
@@ -214,21 +214,21 @@ export default function Contact() {
               {contactInfo.map((info, i) => (
                 <motion.div
                   key={info.label}
-                  className={`flex items-center gap-4 bg-gradient-to-r ${info.color} border border-[#ece3d4]/60 rounded-2xl p-4`}
+                  className={`flex items-center gap-4 bg-gradient-to-r ${info.color} border border-[#dff6ff]/60 rounded-2xl p-4`}
                   initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2 + i * 0.1 }}
                   whileHover={{ x: 5 }}>
-                  <div className="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center text-[#2f6b6a] shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center text-[#06b6d4] shrink-0">
                     {info.icon}
                   </div>
                   <div>
-                    <p className="text-xs font-bold text-[#243746]/40 uppercase tracking-wider mb-0.5">{info.label}</p>
+                    <p className="text-xs font-bold text-[#0f172a]/40 uppercase tracking-wider mb-0.5">{info.label}</p>
                     {info.href ? (
-                      <a href={info.href} className="font-semibold text-[#243746] text-sm hover:text-[#2f6b6a] transition-colors">
+                      <a href={info.href} className="font-semibold text-[#0f172a] text-sm hover:text-[#06b6d4] transition-colors">
                         {info.value}
                       </a>
                     ) : (
-                      <p className="font-semibold text-[#243746] text-sm">{info.value}</p>
+                      <p className="font-semibold text-[#0f172a] text-sm">{info.value}</p>
                     )}
                   </div>
                 </motion.div>
@@ -253,7 +253,7 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}>
 
-            <div className="bg-white rounded-3xl border border-[#ece3d4]/60 shadow-2xl shadow-[#c9a46a]/20 p-8 md:p-10">
+            <div className="bg-white rounded-3xl border border-[#dff6ff]/60 shadow-2xl shadow-[#67e8f9]/20 p-8 md:p-10">
               <AnimatePresence mode="wait">
 
                 {/* ── Success State ── */}
@@ -265,7 +265,7 @@ export default function Contact() {
                     exit={{ opacity: 0, scale: 0.85 }}
                     transition={{ type: "spring", stiffness: 200, damping: 20 }}>
                     <motion.div
-                      className="w-24 h-24 rounded-full bg-gradient-to-br from-[#243746] to-[#2f6b6a] flex items-center justify-center shadow-xl shadow-[#243746]/30"
+                      className="w-24 h-24 rounded-full bg-gradient-to-br from-[#0f172a] to-[#06b6d4] flex items-center justify-center shadow-xl shadow-[#0f172a]/30"
                       initial={{ scale: 0, rotate: -30 }}
                       animate={{ scale: 1, rotate: 0 }}
                       transition={{ type: "spring", stiffness: 260, damping: 18, delay: 0.1 }}>
@@ -274,13 +274,13 @@ export default function Contact() {
                       </svg>
                     </motion.div>
                     <div>
-                      <h3 className="font-black text-2xl text-[#243746] mb-3">Message Sent! 🎉</h3>
-                      <p className="text-[#243746]/50 leading-relaxed text-sm">
+                      <h3 className="font-black text-2xl text-[#0f172a] mb-3">Message Sent! 🎉</h3>
+                      <p className="text-[#0f172a]/50 leading-relaxed text-sm">
                         Thank you for reaching out! Our team will get back to you within 24 hours with a custom growth strategy.
                       </p>
                     </div>
                     <motion.button onClick={() => setStatus("idle")}
-                      className="bg-[#2f6b6a] text-white px-8 py-3 rounded-xl font-bold hover:bg-[#255756] transition-colors"
+                      className="bg-[#06b6d4] text-white px-8 py-3 rounded-xl font-bold hover:bg-[#0891b2] transition-colors"
                       whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                       Send Another Message
                     </motion.button>
@@ -292,8 +292,8 @@ export default function Contact() {
                     initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
 
                     <div className="mb-1">
-                      <h2 className="font-black text-2xl text-[#243746] mb-1">Start Your Journey</h2>
-                      <p className="text-sm text-[#243746]/40">We respond within 24 hours. Fields marked * are required.</p>
+                      <h2 className="font-black text-2xl text-[#0f172a] mb-1">Start Your Journey</h2>
+                      <p className="text-sm text-[#0f172a]/40">We respond within 24 hours. Fields marked * are required.</p>
                     </div>
 
                     {/* Name + Email */}
@@ -330,8 +330,8 @@ export default function Contact() {
 
                     {/* Message */}
                     <div className="relative">
-                      <label className="text-xs font-bold text-[#243746]/45 uppercase tracking-wider mb-1.5 block">
-                        Your Message <span className="text-[#2f6b6a]">*</span>
+                      <label className="text-xs font-bold text-[#0f172a]/45 uppercase tracking-wider mb-1.5 block">
+                        Your Message <span className="text-[#06b6d4]">*</span>
                       </label>
                       <textarea
                         name="message"
@@ -340,9 +340,9 @@ export default function Contact() {
                         placeholder="Tell us about your business and goals..."
                         required
                         rows={4}
-                        className="w-full px-4 py-3.5 rounded-xl bg-[#fbf7f2] border border-[#ece3d4] focus:border-[#2f6b6a] focus:ring-2 focus:ring-[#2f6b6a]/15 outline-none text-sm text-[#243746] transition-all placeholder:text-[#243746]/25 font-medium resize-none"
+                        className="w-full px-4 py-3.5 rounded-xl bg-[#f0fbff] border border-[#dff6ff] focus:border-[#06b6d4] focus:ring-2 focus:ring-[#06b6d4]/15 outline-none text-sm text-[#0f172a] transition-all placeholder:text-[#0f172a]/25 font-medium resize-none"
                       />
-                      <div className="absolute bottom-3.5 right-3.5 text-[10px] text-[#243746]/25 font-medium">
+                      <div className="absolute bottom-3.5 right-3.5 text-[10px] text-[#0f172a]/25 font-medium">
                         {form.message.length}/500
                       </div>
                     </div>
@@ -361,7 +361,7 @@ export default function Contact() {
                     <motion.button
                       type="submit"
                       disabled={status === "loading"}
-                      className="w-full bg-[#2f6b6a] text-white py-4 rounded-xl font-black text-base shadow-xl shadow-[#2f6b6a]/25 hover:bg-[#255756] transition-all duration-300 disabled:opacity-60 flex items-center justify-center gap-2 mt-1"
+                      className="w-full bg-[#06b6d4] text-white py-4 rounded-xl font-black text-base shadow-xl shadow-[#06b6d4]/25 hover:bg-[#0891b2] transition-all duration-300 disabled:opacity-60 flex items-center justify-center gap-2 mt-1"
                       whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                       {status === "loading" ? (
                         <>
@@ -381,7 +381,7 @@ export default function Contact() {
                       )}
                     </motion.button>
 
-                    <p className="text-center text-xs text-[#243746]/30">
+                    <p className="text-center text-xs text-[#0f172a]/30">
                       By submitting, you agree to receive communication from RiseWithMedia.
                     </p>
                   </motion.form>
@@ -395,19 +395,19 @@ export default function Contact() {
       {/* ─── Bottom CTA ───────────────────────────────────────────── */}
       <div className="max-w-3xl mx-auto px-6 mt-10">
         <motion.div
-          className="bg-gradient-to-br from-[#ece3d4]/40 to-[#c9a46a]/20 rounded-3xl p-10 text-center border border-[#ece3d4]/60"
+          className="bg-gradient-to-br from-[#dff6ff]/40 to-[#67e8f9]/20 rounded-3xl p-10 text-center border border-[#dff6ff]/60"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}>
-          <h3 className="font-black text-2xl text-[#243746] mb-3">Prefer a Call?</h3>
-          <p className="text-[#243746]/50 mb-6 text-sm leading-relaxed">
+          <h3 className="font-black text-2xl text-[#0f172a] mb-3">Prefer a Call?</h3>
+          <p className="text-[#0f172a]/50 mb-6 text-sm leading-relaxed">
             Book a free 30-minute strategy session. We'll analyze your business and share a growth plan — no strings attached.
           </p>
           <motion.a
             href="https://wa.me/919345254648?text=Hi%2C%20I%27d%20like%20to%20book%20a%20free%20strategy%20call."
             target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#243746] text-white px-8 py-3.5 rounded-xl font-bold hover:bg-[#2f6b6a] transition-colors duration-300"
+            className="inline-flex items-center gap-2 bg-[#0f172a] text-white px-8 py-3.5 rounded-xl font-bold hover:bg-[#06b6d4] transition-colors duration-300"
             whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
             Book Free Strategy Call
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
